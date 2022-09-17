@@ -1,0 +1,82 @@
+.container {
+    border: 2px solid #eb5d3d;
+    border-radius: 10px;
+    width: 340px;
+    height: 400px;
+    box-shadow: 0px 0px 5px rgba(235, 93, 61, 0.6);
+}
+
+.content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px 0 20px;
+}
+
+.header {
+    padding: 0;
+    margin: 20px 0;
+    font-size: 26px;
+}
+
+.input_wrapper {
+    height: 65%;
+}
+
+.input {
+    width: 100%;
+    margin: 12px 0;
+    font-size: 18px;
+    height: 23px;
+    padding: 2px 3px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.button_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 35%;
+}
+
+.sign_in_text {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sign_in_text:hover {
+    text-decoration: underline;
+    color: #eb5d3d;
+}
+
+.sign_up_button {
+    width: 90px;
+    height: 37px;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #eb5d3d;
+    border: 2px solid #eb5d3d;
+    background-color: #fff;
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+
+.sign_up_button:hover {
+    color: #fff;
+    background-color: #eb5d3d;
+}
+
+.sign_up_button:active {
+    background-color: #da4d2d;
+}
+
+.sign_up_button:disabled {
+    background-color: silver;
+    color: #fff;
+    border: 2px solid silver;
+}

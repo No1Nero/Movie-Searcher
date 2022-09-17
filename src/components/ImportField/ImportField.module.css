@@ -1,0 +1,45 @@
+.import_container {
+    border: 2px solid #eb5d3d;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(235, 93, 61, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 20px;
+    height: 140px;
+}
+
+.import_input {
+    font-size: 18px;
+}
+
+.import_button {
+    width: 90px;
+    height: 35px;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #eb5d3d;
+    border: 2px solid #eb5d3d;
+    background-color: #fff;
+    transition: all 200ms linear;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.import_button:hover {
+    color: #fff;
+    background-color: #eb5d3d;
+}
+
+.import_button:active {
+    background-color: #da4d2d;
+}
+
+.import_button:disabled {
+    background-color: silver;
+    color: #fff;
+    border: 2px solid silver;
+}

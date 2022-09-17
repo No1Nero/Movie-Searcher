@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, lazy } from "react";
+import { useSelector } from "react-redux";
+import { Navigate, Route, Routes } from "react-router-dom";
+import Header from "./components/Header/Header";
 
-function App() {
+const AuthView = lazy(() => import('./views/AuthView/AuthView'));
+const MoviesView = lazy(() => import('./views/MoviesView/MoviesView'));
+
+export default function App() {
+  const token = useSelector(state => state.auth.token);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Suspense>
+        <Routes>
+          <Route path="/" element={token ? <Navigate to='movies' /> : <AuthView />} />
+          <Route path="movies" element={token ? <MoviesView /> : <Navigate to='/' />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }
-
-export default App;

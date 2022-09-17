@@ -1,0 +1,146 @@
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal_content {
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 340px;
+    border: 2px solid #eb5d3d;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    margin: 20px 0;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.input {
+    width: 300px;
+    margin: 12px 0;
+    font-size: 18px;
+    height: 23px;
+    padding: 2px 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.select {
+    width: 313px;
+    margin: 12px 0;
+    font-size: 18px;
+    height: 28px;
+    padding: 2px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.actor_container {
+    width: 100%;
+    padding-left: 30px;
+}
+
+.actor_header {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.one_field_container {
+    display: flex;
+    align-items: center;
+}
+
+.one_actor_input {
+    width: 240px;
+    margin: 9px 0;
+    font-size: 16px;
+    height: 20px;
+    padding: 2px 3px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.delete_actor_button {
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #eb5d3d;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 25;
+    background-color: #eb5d3d;
+    cursor: pointer;
+}
+
+.add_actor_button {
+    width: 140px;
+    height: 36px;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #eb5d3d;
+    border: 1px solid #eb5d3d;
+    background-color: #fff;
+    transition: all 200ms linear;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.add_actor_button:hover {
+    color: #fff;
+    background-color: #eb5d3d;
+}
+
+.add_actor_button:active {
+    background-color: #da4d2d;
+}
+
+.submit_button_container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit_button {
+    width: 100px;
+    height: 36px;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #eb5d3d;
+    border: 2px solid #eb5d3d;
+    background-color: #fff;
+    transition: all 200ms linear;
+    cursor: pointer;
+    margin-top: 35px;
+}
+
+.submit_button:hover {
+    color: #fff;
+    background-color: #eb5d3d;
+}
+
+.submit_button:active {
+    background-color: #da4d2d;
+}

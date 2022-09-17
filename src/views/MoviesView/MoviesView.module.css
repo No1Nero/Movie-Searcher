@@ -1,0 +1,38 @@
+.main {
+    width: 100%;
+    padding: 30px 50px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.open_modal_button {
+    width: 120px;
+    height: 40px;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #eb5d3d;
+    border: 2px solid #eb5d3d;
+    background-color: #fff;
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+
+.open_modal_button:hover {
+    color: #fff;
+    background-color: #eb5d3d;
+}
+
+.open_modal_button:active {
+    background-color: #da4d2d;
+}
+
+.options_container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20%;
+}

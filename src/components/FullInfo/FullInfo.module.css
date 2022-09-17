@@ -1,0 +1,105 @@
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.container {
+    position: fixed;
+    top: 40%;
+    right: 15%;
+    width: 320px;
+    height: 420px;
+    border: 2px solid #eb5d3d;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0px 0px 6px rgba(235, 93, 61, 0.4);
+}
+
+.header {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+.content {
+    padding-top: 30px;
+    height: 62%;
+}
+
+.info_label {
+    font-size: 18px;
+}
+
+.info_field {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.info_field_title {
+    composes: info_field;
+    font-weight: 700;
+}
+
+.actor_container {
+    display: flex;
+    align-items: baseline;
+    font-size: 18px;
+}
+
+.actor_field {
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.actor_field::after {
+    content: ', ';
+}
+
+.actor_field:last-child::after {
+    content: '.';
+}
+
+.button_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 25%;
+}
+
+.delete_button {
+    width: 130px;
+    height: 40px;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #eb5d3d;
+    border: 2px solid #eb5d3d;
+    background-color: #fff;
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+
+.delete_button:hover {
+    color: #fff;
+    background-color: #eb5d3d;
+}
+
+.delete_button:active {
+    background-color: #da4d2d;
+}
+
+.no_film {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.wrapper {
+    height: 100%;
+}
