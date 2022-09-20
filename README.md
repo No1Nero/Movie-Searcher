@@ -14,4 +14,4 @@ docker run -p ${LOCAL_PORT}:3000 -e REACT_APP_API_URL=${YOUR_API_URL}(Default: h
 
 If you want to run image from DockerHub use the next command:
 
-docker run -p ${LOCAL_PORT}:3000 -e REACT_APP_API_URL=${YOUR_API_URL}(Default: http://localhost:8000/api/v1) no1nero/movie-searcher-test
+docker run -p ${LOCAL_PORT}:3000 -e REACT_APP_API_URL=${YOUR_API_URL}(Default: http://localhost:8000/api/v1) no1nero/movie-searcher
