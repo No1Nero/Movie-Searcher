@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './MoviesList.module.css';
 
-export default function MoviesList({ movies, setChosenMovieId }) {
+export default function MoviesList({ movies, setChosenMovieId, setCurrentPage, currentPage, maxMovies }) {
     return (
         <ul>
             {movies.map(({ id, title, year, format }) => (
@@ -13,6 +13,10 @@ export default function MoviesList({ movies, setChosenMovieId }) {
                     <p className={s.format}>{format}</p>
                 </li>
             ))}
+            <div className={s.button_container}>
+                <button className={s.button} disabled={currentPage === 0} onClick={() => setCurrentPage(page => page - 1)}>←</button>
+                <button className={s.button} disabled={currentPage === Math.ceil(maxMovies / 10) - 1 || maxMovies === 0} onClick={() => setCurrentPage(page => page + 1)}>→</button>
+            </div>
         </ul>
     );
 };

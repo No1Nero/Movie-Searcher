@@ -1,0 +1,33 @@
+.container {
+    position: absolute;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    min-height: 50px;
+    max-height: 50px;
+    border: 1px solid #000;
+    border-radius: 0 0 10px 10px;
+    font-size: 22px;
+    padding-top: 15px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.success_bar {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 10px;
+    background-color: green;
+}
+
+.error_bar {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgb(255, 0, 0);
+}

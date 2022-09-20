@@ -23,7 +23,7 @@ export default function ModalForm({ toggleModal, addMovie }) {
     const changeActorInput = (e, index) => {
         const { name, value } = e.target;
         const list = [...actorList];
-        list[index][name] = value;
+        list[index][name] = value.replace(/[!'"№;%:?*}{()_@#$^&+=<>1234567890/|{},]/, '');
         setActorList(list);
     };
 
@@ -31,7 +31,7 @@ export default function ModalForm({ toggleModal, addMovie }) {
         const { name, value } = e.target;
         switch (name) {
             case 'title':
-                setTitle(value);
+                setTitle(value.replace(/[!'"№;%:?*}{()_@#$^&+=<>/|{},]/, ''));
                 break;
 
             case 'year':
@@ -109,7 +109,12 @@ export default function ModalForm({ toggleModal, addMovie }) {
                     ))}
                 </div>
                 <div className={s.submit_button_container}>
-                    <button className={s.submit_button} type="submit">Add</button>
+                    <button
+                        disabled={title.trim() === '' || !year || !format || !actorList}
+                        className={s.submit_button}
+                        type="submit">
+                        Add
+                    </button>
                 </div>
             </form>
         </div>

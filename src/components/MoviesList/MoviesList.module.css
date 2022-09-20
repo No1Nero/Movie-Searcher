@@ -29,3 +29,40 @@
 .format {
     font-size: 19px;
 }
+
+.button_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    width: 80px;
+    height: 37px;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eb5d3d;
+    border: 2px solid #eb5d3d;
+    background-color: #fff;
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #eb5d3d;
+}
+
+.button:active {
+    background-color: #da4d2d;
+}
+
+.button:disabled {
+    background-color: silver;
+    color: #fff;
+    border: 2px solid silver;
+}

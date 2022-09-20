@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { moviesApi } from "../../services/movies-service";
+import ConfirmDeleting from "../ConfirmDeleting/ConfirmDeleting";
 import s from './FullInfo.module.css';
 
 export default function FullInfo({ chosenMovieId, deleteMovie }) {
     const [fullInfo, setFullInfo] = useState({});
+    const [showModalConfirm, setShowModalConfirm] = useState(false);
 
     const token = useSelector(state => state.auth.token);
 
@@ -16,8 +18,13 @@ export default function FullInfo({ chosenMovieId, deleteMovie }) {
         });
     }, [chosenMovieId, token]);
 
+    const toggleModalConfirm = () => {
+        setShowModalConfirm(showModalConfirm => !showModalConfirm);
+    };
+
     return (
         <div className={s.main}>
+            {showModalConfirm && <ConfirmDeleting deleteMovie={deleteMovie} toggleModalConfirm={toggleModalConfirm} />}
             <div className={s.container}>
                 {chosenMovieId && fullInfo ?
                     <div className={s.wrapper}>
@@ -42,7 +49,7 @@ export default function FullInfo({ chosenMovieId, deleteMovie }) {
                             </div>
                         </div>
                         <div className={s.button_container}>
-                            <button onClick={deleteMovie} className={s.delete_button}>Delete movie</button>
+                            <button onClick={toggleModalConfirm} className={s.delete_button}>Delete movie</button>
                         </div>
                     </div> :
                     <div className={s.no_film}>

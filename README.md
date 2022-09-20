@@ -1,3 +1,9 @@
+For the program to work correctly, it is necessary to launch the docker container of the backend part and correctly specify the server port when starting this docker container.
+
+If you want to run image of back-end from DockerHub use the next command:
+
+docker run --name movies -p ${LOCAL_PORT}:8000 webbylabhub/movies
+
 If you want to build local image use the next command:
 
 docker build -t ${IMAGE_NAME}

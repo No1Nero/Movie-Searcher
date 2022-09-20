@@ -144,3 +144,9 @@ input::-webkit-inner-spin-button {
 .submit_button:active {
     background-color: #da4d2d;
 }
+
+.submit_button:disabled {
+    background-color: silver;
+    color: #fff;
+    border: 2px solid silver;
+}
